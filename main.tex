@@ -1,0 +1,334 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage[margin=0.8in,top=0.8in,bottom=0.8in]{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage{microtype}
+
+% Define colors
+\definecolor{headercolor}{RGB}{0, 51, 102}
+\definecolor{subheadercolor}{RGB}{70, 70, 70}
+\definecolor{linkcolor}{RGB}{0, 102, 204}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor
+}
+
+% Section title format with proper spacing
+\titleformat{\section}
+    {\large\bfseries\color{headercolor}}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.3em}\color{headercolor}\titlerule\vspace{-0.5em}]
+
+\titleformat{\subsection}
+    {\normalsize\bfseries\color{subheadercolor}}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}]
+
+% Custom commands for better formatting
+\newcommand{\CVItem}[2]{
+    \noindent\textbf{#1} \hfill #2\\
+}
+
+\newcommand{\CVSubItem}[1]{
+    \vspace{-0.8em}
+    \begin{adjustwidth}{0em}{0em}
+    \textit{#1}
+    \end{adjustwidth}
+    \vspace{0.3em}
+}
+
+% Adjust list spacing
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=1.5em, parsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt, leftmargin=1.5em, parsep=0pt}
+
+% Prevent widows and orphans
+\widowpenalty=10000
+\clubpenalty=10000
+
+\begin{document}
+\pagestyle{empty}
+
+% Header with name and contact information
+\begin{center}
+    {\LARGE \textbf{\color{headercolor}Yonghan Kwon}}\\[2mm]
+    {\large PhD in Biostatistics and Computing}\\[1mm]
+    Yonsei University, Seoul, South Korea\\[2mm]
+    
+    \begin{tabular}{c c}
+        \faEnvelope\ \href{mailto:yonghankwon0@yuhs.ac}{yonghankwon0@yuhs.ac} & 
+        \faEnvelope\ \href{mailto:yonghankwon0@gmail.com}{yonghankwon0@gmail.com} \\[1mm]
+        \faLinkedin\ \href{https://www.linkedin.com/in/yonghan-kwon-84693a171}{LinkedIn} & 
+        \aiGoogleScholar\ \href{https://scholar.google.com/citations?user=ED4nS-8AAAAJ}{Google Scholar}
+    \end{tabular}
+\end{center}
+
+\vspace{0.3em}
+
+% Research Interests
+\begin{center}
+    \colorbox{gray!10}{
+        \begin{tabular}{c}
+            \textbf{Research Interests:} Biostatistics $\cdot$ Machine Learning $\cdot$ Network Analysis $\cdot$ Radiology $\cdot$ Radiomics
+        \end{tabular}
+    }
+\end{center}
+
+\vspace{0.3em}
+
+% Education Section
+\section*{Education}
+
+\CVItem{Yonsei University, South Korea}{Mar 2022 -- Aug 2025}
+\CVSubItem{Doctor of Philosophy in Biostatistics and Computing}
+\noindent\textit{Thesis:} Adaptive Group-Laplacian Regularization with Stability Selection: A Robust Approach to Variable Selection
+
+\vspace{0.5em}
+
+\CVItem{Yonsei University, South Korea}{Mar 2020 -- Feb 2022}
+\CVSubItem{Master's Degree in Biostatistics and Computing}
+\noindent\textit{Thesis:} Stability selection for LASSO with weights based on AUC
+
+\vspace{0.5em}
+
+\CVItem{Kyonggi University, South Korea}{2014 -- 2020}
+\CVSubItem{Bachelor's Degree in Applied Statistics}
+
+% Experience Section
+\section*{Research Experience}
+
+\CVItem{Postdoctoral Researcher}{Sep 2025 -- Present}
+\CVSubItem{Department of Radiology, Yonsei University, South Korea}
+\vspace{-0.5em}
+\begin{itemize}
+    \item Conducting advanced radiomics and biostatistics research under the supervision of Younghan Lee, MD, PhD and Kyunghwa Han, PhD
+\end{itemize}
+
+\vspace{0.3em}
+
+\CVItem{Researcher}{Oct 2020 -- Aug 2025}
+\CVSubItem{Yonsei University, South Korea}
+\vspace{-0.5em}
+\begin{itemize}
+    \item Conducting radiology research at CCIDS under the guidance of Kyunghwa Han, PhD
+\end{itemize}
+
+\vspace{0.3em}
+
+\CVItem{Student Intern}{Jun 2019 -- Oct 2019}
+\CVSubItem{CCADD, Seoul National University, South Korea}
+\vspace{-0.5em}
+\begin{itemize}
+    \item Contributed to dimensionality reduction modeling for clinical trial feasibility assessment using EMR data under Howard Lee, PhD
+\end{itemize}
+
+\vspace{0.3em}
+
+\CVItem{Student Intern}{Mar 2019 -- Jun 2019}
+\CVSubItem{Kyonggi University, South Korea}
+\vspace{-0.5em}
+\begin{itemize}
+    \item Learned preprocessing microbiome data and statistical tests under Yujin Chung, PhD
+\end{itemize}
+
+% Teaching Experience Section
+\section*{Teaching Experience}
+
+\CVItem{Guest Lecturer}{Fall 2025}
+\CVSubItem{Graduate School of Public Health, Yonsei University, South Korea}
+\vspace{-0.5em}
+\begin{itemize}
+    \item Course: Big Data and Data Mining
+    \item Topic: Data Mining Algorithms (1) -- Classification Analysis
+    \item Covered logistic regression, CART, and Random Forest methods
+    \item Delivered lecture on November 4, 2025 (Week 9)
+\end{itemize}
+
+% Publications Section
+\section*{Peer-Reviewed Publications}
+{\small \textit{* Underlined authors indicate first authors}}\\[0.3em]
+
+\begin{enumerate}[label={\color{headercolor}[\arabic*]}]
+    \setlength\itemsep{0.3em}
+    \item \underline{J Kim}, EJ Lee, H Yoon, K Han, \textbf{Y Kwon}, H Koh, YW Kim, MJ Lee. (2026).
+    Associations of Ultrasound-Derived Fat Fraction and MRI PDFF Measurements: A Prospective Study in Pediatric Patients With Suspected MASLD.
+    \textit{American Journal of Roentgenology}. \href{https://doi.org/10.2214/AJR.25.34230}{[DOI]}
+
+    \item \underline{J Lee}, J Go, SJ Lee, \textbf{Y Kwon}, NH Kim, JY Kim, HS Park. (2025).
+    Comparative study of mastectomy using conventional techniques, multiport and single-port robotic surgical systems.
+    \textit{Cancer Research and Treatment}. \href{https://doi.org/10.4143/crt.2025.115}{[DOI]}
+
+    \item \underline{SM Ahn}, DC Jung, MH Moon, JW Lee, K Han, \textbf{Y Kwon}. (2025).
+    A potential imaging-based predictor for renal functional outcomes after partial nephrectomy for localized renal masses.
+    \textit{BMC Urology}, 25(1), 244. \href{https://doi.org/10.1186/s12894-025-01907-3}{[DOI]}
+
+    \item \underline{JE Lee}, NY Kim, YH Kim, \textbf{Y Kwon}, S Kim, K Han, YJ Suh. (2025).
+    Long-term prognostic implications of thoracic aortic calcification on CT using artificial intelligence–based quantification in a screening population: a two-center study.
+    \textit{American Journal of Roentgenology}, 1--15. \href{https://doi.org/10.2214/AJR.25.32697}{[DOI]}
+
+    \item \underline{J Kim}, MJ Lee, HJ Lim, \textbf{Y Kwon}, K Han, H Yoon. (2025).
+    Pediatric reference values for total psoas muscle area in Korean children and adolescents.
+    \textit{Frontiers in Pediatrics}, 12, 1443523. \href{https://doi.org/10.3389/fped.2024.1443523}{[DOI]}
+
+    \item \underline{YJ Suh}, K Han, \textbf{Y Kwon}, H Kim, S Lee, SH Hwang, MH Kim, HJ Shin, et al. (2024).
+    Computed Tomography Radiomics for Preoperative Prediction of Spread Through Air Spaces in the Early Stage of Surgically Resected Lung Adenocarcinomas.
+    \textit{Yonsei Medical Journal}, 65(3), 163. \href{https://doi.org/10.3349/ymj.2023.0368}{[DOI]}
+
+    \item \underline{\textbf{Y Kwon}}, K Han. (2023).
+    Development and Validation of a Prediction Model: Application to Digestive Cancer Research.
+    \textit{Journal of Digestive Cancer Research}, 11(3), 157--164. \href{https://doi.org/10.52927/jdcr.2023.11.3.157}{[DOI]}
+
+    \item \underline{S Chang}, K Han, \textbf{Y Kwon}, L Kim, S Hwang, H Kim, BW Choi. (2023).
+    T1 map-based radiomics for prediction of left ventricular reverse remodeling in patients with nonischemic dilated cardiomyopathy.
+    \textit{Korean Journal of Radiology}, 24(5), 395. \href{https://doi.org/10.3348/kjr.2023.0065}{[DOI]}
+
+    \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2023).
+    Stability selection for LASSO with weights based on AUC.
+    \textit{Scientific Reports}, 13(1), 5207. \href{https://doi.org/10.1038/s41598-023-32517-4}{[DOI]}
+
+    \item \underline{SH Chun}, YJ Suh, K Han, \textbf{Y Kwon}, AY Kim, BW Choi. (2022).
+    Deep learning-based reconstruction on cardiac CT yields distinct radiomic features compared to iterative and filtered back projection reconstructions.
+    \textit{Scientific Reports}, 12(1), 15171. \href{https://doi.org/10.1038/s41598-022-19546-1}{[DOI]}
+
+    \item \underline{HS Park}, J Lee, JY Kim, JM Park, \textbf{Y Kwon}. (2022).
+    A prospective randomized study to compare postoperative drainage after mastectomy using electrosurgical bipolar systems and conventional electro-cautery.
+    \textit{Journal of Breast Cancer}, 25(4), 307. \href{https://doi.org/10.4048/jbc.2022.25.e29}{[DOI]}
+
+    \item \underline{JA Gim}, \textbf{Y Kwon}, HA Lee, KR Lee, S Kim, Y Choi, YK Kim, H Lee. (2020).
+    A Machine Learning-Based Identification of Genes Affecting the Pharmacokinetics of Tacrolimus Using the DMET$^{TM}$ Plus Platform.
+    \textit{International Journal of Molecular Sciences}, 21(7), 2517. \href{https://doi.org/10.3390/ijms21072517}{[DOI]}
+\end{enumerate}
+
+% Presentations Section
+\section*{Conference Presentations}
+
+\subsection*{Oral Presentations}
+{\small \textit{* Underlined authors presented the work}}\\[0.3em]
+
+\begin{enumerate}[label={\color{subheadercolor}[\arabic*]}]
+    \setlength\itemsep{0.3em}
+    \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2025).
+    Adaptive Group-Laplacian Regularization with Stability Selection: A Robust Approach to Variable Selection.
+    \textit{Korean Statistical Society Summer Conference}.
+
+    \item \underline{\textbf{Y Kwon}}, J Kim, H Yoon, Y Kim, H Koh, E Lee, K Han, M Lee. (2025).
+    Optimal Minimal Number for the Proper Acquisition of Multisample Ultrasound Point Shear Wave Elastography for Evaluating Pediatric Liver in Consideration With the Effect of Breathing.
+    \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
+    
+    \item \underline{H Yoon}, J Kim, K Han, \textbf{Y Kwon}, Y Kim, H Koh, E Lee, M Lee. (2025).
+    Optimum Minimal Number for Proper Acquisition of Ultrasound-Derived Fat Fraction in Pediatric Patients With Suspicious Fatty Liver Disease in Consideration With the Effect of Breathing.
+    \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
+    
+    \item \underline{J Kim}, H Yoon, K Han, \textbf{Y Kwon}, H Koh, Y Kim, E Lee, M Lee. (2025).
+    Correlation Between Ultrasound Derived Fat Fraction and Proton Density Fat Fraction for Evaluating Pediatric Hepatic Steatosis With Consideration of the Breathing Effect.
+    \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
+    
+    \item \underline{S Lee}, K Han, \textbf{Y Kwon}, YJ Suh. (2024).
+    Development and Validation of a Machine-Learning Model for Synthetic Hematocrit Estimation in Cardiac MRI without Blood Sampling.
+    \textit{Korean Congress of Radiology (KCR)}, October 3.
+    
+    \item \underline{JE Lee}, N Kim, \textbf{Y Kwon}, K Han, YJ Suh. (2024).
+    Long-term prognostic implications of AI-based thoracic aorta calcification quantification in a screening population: a multicenter study.
+    \textit{Radiological Society of North America Annual Meeting}.
+\end{enumerate}
+
+\subsection*{Poster Presentations}
+{\small \textit{* Underlined authors presented the work}}\\[0.3em]
+\begin{enumerate}[label={\color{subheadercolor}[\arabic*]}]
+    \setlength\itemsep{0.3em}
+    \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2025).
+    Adaptive Group-Laplacian Regularization with Stability Selection: A Robust Approach to Variable Selection.
+    \textit{IASC-ARS 2025 (International Association for Statistical Computing - Asian Regional Section)}.
+    
+    \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2023).
+    Comparative analysis of LASSO and Group LASSO: performance, practicality, and application.
+    \textit{Korean Statistical Society Winter Conference}.
+    
+    \item \underline{Y So}, \textbf{Y Kwon}, K Han, I Jung. (2023).
+    Comparison of variable selection through the combination of sub-sampling method and weighting method with imbalanced data.
+    \textit{Korean Statistical Society Summer Conference}.
+    
+    \item \underline{R Lee}, \textbf{Y Kwon}, K Han, I Jung. (2022).
+    Random survival forest-based weighted variable selection for survival data.
+    \textit{Korean Statistical Society Summer Conference}.
+    
+    \item \underline{\textbf{Y Kwon}}, K Han, I Jung. (2021).
+    Stability selection for LASSO with weights based on AUC.
+    \textit{Korean Statistical Society Fall Conference}.
+    
+    \item \underline{Y Jeon}, \textbf{Y Kwon}, H Lee. (2019).
+    A dimensionality reduction model to increase the efficiency and accuracy of clinical trial feasibility assessment using electronic medical records.
+    \textit{Korean Society of Medical Informatics Fall Conference}.
+\end{enumerate}
+% Awards and Grants Section
+\section*{Grants \& Awards}
+
+\subsection*{Research Grants}
+\noindent\textbf{Research Subsidies for Ph.D. Candidates} \hfill Sep 2024 -- Aug 2026\\
+\textit{Development and clinical application of variable selection methodology via network-based clustering of high-dimensional radiomics data}\\
+\textbf{Award Amount:} 50,000,000 KRW (2-year grant)
+
+\subsection*{Awards \& Honors}
+\begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{0.2em}
+    \item \textbf{Graduate Student Outstanding Paper Award} (Encouragement) -- Yonsei University College of Medicine (2022)
+    \item \textbf{Poster Award} (3rd place/25 teams) -- Korean Statistical Society Summer Conference (2022)
+    \item \textbf{Poster Award} (3rd place/42 teams) -- Korean Statistical Society Fall Conference (2021)
+    \item \textbf{3rd Prize} -- Seoul National University Medical AI Competition (2020)
+    \item \textbf{2nd Prize} -- Data Analysis Contest, Kyonggi University (2019)
+    \item \textbf{Excellence Award} -- 7th University Student Reliability Project Contest (2017)
+\end{itemize}
+
+% Scholarships Section
+\section*{Scholarships}
+
+\begin{multicols}{2}
+\subsection*{Yonsei University (2020--2024)}
+\begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{0.1em}
+    \item Yonsei Graduate Fellowship (YGF): 5,000,000 KRW
+    \item Academic Research Fellowship (ARF): 1,000,000 KRW
+    \item Chief Professor GSRA: 5,000,000 KRW
+    \item Work/Teaching Assistantships: 22,100,000 KRW
+    \item BK21 Plus Scholarship: 600,000 KRW
+\end{itemize}
+
+\columnbreak
+
+\subsection*{Kyonggi University (2018--2019)}
+\begin{itemize}[leftmargin=1em]
+    \setlength\itemsep{0.1em}
+    \item Academic Scholarship: 1,932,000 KRW
+    \item KGU Recommended Type A: 1,500,000 KRW
+    \item Academic/Employment Scholarships: 1,300,000 KRW
+\end{itemize}
+\end{multicols}
+
+\vspace{0.5em}
+
+% Languages Section
+\section*{Languages}
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Korean:} Native proficiency
+    \item \textbf{English:} Professional working proficiency
+\end{itemize}
+
+\end{document}
