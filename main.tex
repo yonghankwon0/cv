@@ -14,6 +14,23 @@
 \usepackage{multicol}
 \usepackage{changepage}
 \usepackage{microtype}
+\usepackage{etaremune}
+
+% Custom etaremune label commands
+\newenvironment{publist}{%
+    \renewcommand{\labelenumi}{\color{headercolor}[\theenumi]}%
+    \begin{etaremune}[itemsep=0.3em]%
+}{\end{etaremune}}
+
+\newenvironment{conflist}{%
+    \renewcommand{\labelenumi}{\color{subheadercolor}[\theenumi]}%
+    \begin{etaremune}[itemsep=0.3em]%
+}{\end{etaremune}}
+
+\newenvironment{projlist}{%
+    \renewcommand{\labelenumi}{\color{headercolor}[\theenumi]}%
+    \begin{etaremune}[leftmargin=2em, itemsep=0.3em]%
+}{\end{etaremune}}
 
 % Define colors
 \definecolor{headercolor}{RGB}{0, 51, 102}
@@ -70,8 +87,8 @@
 % Header with name and contact information
 \begin{center}
     {\LARGE \textbf{\color{headercolor}Yonghan Kwon}}\\[2mm]
-    {\large PhD in Biostatistics and Computing}\\[1mm]
-    Yonsei University, Seoul, South Korea\\[2mm]
+    {\large Research Assistant Professor $\cdot$ PhD in Biostatistics and Computing}\\[1mm]
+    Research Institute of Radiological Science, Yonsei University College of Medicine, Seoul, South Korea\\[2mm]
     
     \begin{tabular}{c c}
         \faEnvelope\ \href{mailto:yonghankwon0@yuhs.ac}{yonghankwon0@yuhs.ac} & 
@@ -115,11 +132,12 @@
 % Experience Section
 \section*{Research Experience}
 
-\CVItem{Postdoctoral Researcher}{Sep 2025 -- Present}
-\CVSubItem{Department of Radiology, Yonsei University, South Korea}
+\CVItem{Research Assistant Professor}{Sep 2026 -- Present}
+\CVItem{Postdoctoral Researcher}{Sep 2025 -- Aug 2026}
+\CVSubItem{Research Institute of Radiological Science, Yonsei University College of Medicine, South Korea}
 \vspace{-0.5em}
 \begin{itemize}
-    \item Conducting advanced radiomics and biostatistics research under the supervision of Younghan Lee, MD, PhD and Kyunghwa Han, PhD
+    \item Conducting advanced research in medical imaging and biostatistics at the Department of Radiology, working with Younghan Lee, MD, PhD and Kyunghwa Han, PhD
 \end{itemize}
 
 \vspace{0.3em}
@@ -166,11 +184,14 @@
 \section*{Peer-Reviewed Publications}
 {\small \textit{* Underlined authors indicate first authors}}\\[0.3em]
 
-\begin{enumerate}[label={\color{headercolor}[\arabic*]}]
-    \setlength\itemsep{0.3em}
+\begin{publist}
     \item \underline{J Kim}, EJ Lee, H Yoon, K Han, \textbf{Y Kwon}, H Koh, YW Kim, MJ Lee. (2026).
     Associations of Ultrasound-Derived Fat Fraction and MRI PDFF Measurements: A Prospective Study in Pediatric Patients With Suspected MASLD.
     \textit{American Journal of Roentgenology}. \href{https://doi.org/10.2214/AJR.25.34230}{[DOI]}
+
+    \item \underline{\textbf{Y Kwon}}, YJ Suh, YW Park, SS Ahn, K Han, MJ Ha. (2026).
+    Enhancing cancer prognostics with group penalty models: a comparative study on radiomics feature selection in lung adenocarcinomas and meningiomas.
+    \textit{Quantitative Imaging in Medicine and Surgery}, 16(2), 118. \href{https://doi.org/10.21037/qims-2025-1951}{[DOI]}
 
     \item \underline{J Lee}, J Go, SJ Lee, \textbf{Y Kwon}, NH Kim, JY Kim, HS Park. (2025).
     Comparative study of mastectomy using conventional techniques, multiport and single-port robotic surgical systems.
@@ -215,7 +236,7 @@
     \item \underline{JA Gim}, \textbf{Y Kwon}, HA Lee, KR Lee, S Kim, Y Choi, YK Kim, H Lee. (2020).
     A Machine Learning-Based Identification of Genes Affecting the Pharmacokinetics of Tacrolimus Using the DMET$^{TM}$ Plus Platform.
     \textit{International Journal of Molecular Sciences}, 21(7), 2517. \href{https://doi.org/10.3390/ijms21072517}{[DOI]}
-\end{enumerate}
+\end{publist}
 
 % Presentations Section
 \section*{Conference Presentations}
@@ -223,8 +244,7 @@
 \subsection*{Oral Presentations}
 {\small \textit{* Underlined authors presented the work}}\\[0.3em]
 
-\begin{enumerate}[label={\color{subheadercolor}[\arabic*]}]
-    \setlength\itemsep{0.3em}
+\begin{conflist}
     \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2025).
     Adaptive Group-Laplacian Regularization with Stability Selection: A Robust Approach to Variable Selection.
     \textit{Korean Statistical Society Summer Conference}.
@@ -232,28 +252,27 @@
     \item \underline{\textbf{Y Kwon}}, J Kim, H Yoon, Y Kim, H Koh, E Lee, K Han, M Lee. (2025).
     Optimal Minimal Number for the Proper Acquisition of Multisample Ultrasound Point Shear Wave Elastography for Evaluating Pediatric Liver in Consideration With the Effect of Breathing.
     \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
-    
+
     \item \underline{H Yoon}, J Kim, K Han, \textbf{Y Kwon}, Y Kim, H Koh, E Lee, M Lee. (2025).
     Optimum Minimal Number for Proper Acquisition of Ultrasound-Derived Fat Fraction in Pediatric Patients With Suspicious Fatty Liver Disease in Consideration With the Effect of Breathing.
     \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
-    
+
     \item \underline{J Kim}, H Yoon, K Han, \textbf{Y Kwon}, H Koh, Y Kim, E Lee, M Lee. (2025).
     Correlation Between Ultrasound Derived Fat Fraction and Proton Density Fat Fraction for Evaluating Pediatric Hepatic Steatosis With Consideration of the Breathing Effect.
     \textit{The 56th Annual Congress of Korean Society of Ultrasound in Medicine}.
-    
+
     \item \underline{S Lee}, K Han, \textbf{Y Kwon}, YJ Suh. (2024).
     Development and Validation of a Machine-Learning Model for Synthetic Hematocrit Estimation in Cardiac MRI without Blood Sampling.
     \textit{Korean Congress of Radiology (KCR)}, October 3.
-    
+
     \item \underline{JE Lee}, N Kim, \textbf{Y Kwon}, K Han, YJ Suh. (2024).
     Long-term prognostic implications of AI-based thoracic aorta calcification quantification in a screening population: a multicenter study.
     \textit{Radiological Society of North America Annual Meeting}.
-\end{enumerate}
+\end{conflist}
 
 \subsection*{Poster Presentations}
 {\small \textit{* Underlined authors presented the work}}\\[0.3em]
-\begin{enumerate}[label={\color{subheadercolor}[\arabic*]}]
-    \setlength\itemsep{0.3em}
+\begin{conflist}
     \item \underline{M Kim}, \textbf{Y Kwon}, I Jung. (2025).
     Evaluating Automated Calibration for Stability Selection in Penalized Logistic Regression.
     \textit{Korean Society of Health Informatics and Statistics Conference}.
@@ -261,38 +280,85 @@
     \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2025).
     Adaptive Group-Laplacian Regularization with Stability Selection: A Robust Approach to Variable Selection.
     \textit{IASC-ARS 2025 (International Association for Statistical Computing - Asian Regional Section)}.
-    
+
     \item \underline{\textbf{Y Kwon}}, K Han, YJ Suh, I Jung. (2023).
     Comparative analysis of LASSO and Group LASSO: performance, practicality, and application.
     \textit{Korean Statistical Society Winter Conference}.
-    
+
     \item \underline{Y So}, \textbf{Y Kwon}, K Han, I Jung. (2023).
     Comparison of variable selection through the combination of sub-sampling method and weighting method with imbalanced data.
     \textit{Korean Statistical Society Summer Conference}.
-    
+
     \item \underline{R Lee}, \textbf{Y Kwon}, K Han, I Jung. (2022).
     Random survival forest-based weighted variable selection for survival data.
     \textit{Korean Statistical Society Summer Conference}.
-    
+
     \item \underline{\textbf{Y Kwon}}, K Han, I Jung. (2021).
     Stability selection for LASSO with weights based on AUC.
     \textit{Korean Statistical Society Fall Conference}.
-    
+
     \item \underline{Y Jeon}, \textbf{Y Kwon}, H Lee. (2019).
     A dimensionality reduction model to increase the efficiency and accuracy of clinical trial feasibility assessment using electronic medical records.
     \textit{Korean Society of Medical Informatics Fall Conference}.
-\end{enumerate}
+\end{conflist}
+% Research Projects Section
+\section*{Research Projects}
+
+\subsection*{As Principal Investigator}
+\begin{projlist}
+    \item \textbf{Development and clinical application of variable selection methodology via network-based clustering of high-dimensional radiomics data} (2024-31-0853, 2025-31-0219) \hfill Sep 2024 -- Aug 2025\\
+    \textit{Funded by National Research Foundation of Korea (NRF)}\\
+    Research Subsidies for Ph.D. Candidates, Award Amount: 50,000,000 KRW (2-year grant, Sep 2024 -- Aug 2026)
+\end{projlist}
+
+\subsection*{As Researcher}
+\begin{projlist}
+    \item \textbf{Statistical analysis for clinical trial of chest X-ray generative AI software (M4CXR)} (2024-31-1615) \hfill Sep 2025 -- Feb 2026\\
+    \textit{PI: K Han $\cdot$ Funded by DeepNoid Inc.}
+
+    \item \textbf{Clinical efficacy evidence and multinational, multicenter clinical trial for global competitiveness of breast/thyroid ultrasound real-time AI system} (2024-31-1162) \hfill Sep 2025 -- Dec 2025\\
+    \textit{PI: JH Yoon $\cdot$ Funded by National Medical Device R\&D Program}
+
+    \item \textbf{Multinational, multicenter, post-market clinical trial for strengthening global business capabilities of SwiftMR product} (2024-31-1221) \hfill Sep 2025 -- Dec 2025\\
+    \textit{PI: YH Lee $\cdot$ Funded by National Medical Device R\&D Program}
+
+    \item \textbf{Data augmentation using generative AI and novel imaging biomarker discovery: Development of high-performance automated diagnostic model for precision malignancy diagnosis of refractory solid tumors} (2025-31-0325) \hfill Mar 2025 -- Aug 2025\\
+    \textit{PI: DC Jung $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{2024 Medical AI Clinic} (2024-31-0610) \hfill Aug 2024 -- Dec 2024\\
+    \textit{PI: J Huh $\cdot$ Funded by National IT Industry Promotion Agency (NIPA)}
+
+    \item \textbf{Optimal treatment decision system for incidentally discovered early solid tumors: Prediction of residual function after treatment based on self-adaptive deep learning image segmentation model} (2024-31-0249) \hfill Mar 2024 -- Feb 2025\\
+    \textit{PI: DC Jung $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Comparative study of sample size calculation methods for diagnostic accuracy comparison of multiple readers} (2024-32-0069) \hfill Mar 2024 -- Feb 2025\\
+    \textit{PI: K Han $\cdot$ Funded by Yonsei University Medical Center}
+
+    \item \textbf{Graph theory-based integrative statistical methodology for multi-layer data} (2023-31-0129) \hfill Dec 2023 -- Feb 2024\\
+    \textit{PI: MJ Ha $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Development of statistical methods for evaluating radiomics feature stability and validating imaging-based diagnostic prognostic prediction models in multicenter or multi-reader data} (2023-31-0262) \hfill Mar 2023 -- Feb 2024\\
+    \textit{PI: K Han $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Development of optimization algorithms for cardiac calcification assessment on chest CT} (2023-31-0090) \hfill Mar 2023 -- Feb 2024\\
+    \textit{PI: YJ Suh $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Statistical methods for evaluating radiomics feature stability and validating imaging-based diagnostic prognostic prediction models in multicenter or multi-reader data} (2022-31-0091) \hfill Jun 2022 -- Feb 2023\\
+    \textit{PI: K Han $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Development of optimization algorithms for cardiac calcification assessment on chest CT} (2021-31-0455) \hfill Mar 2021 -- Feb 2022\\
+    \textit{PI: YJ Suh $\cdot$ Funded by National Research Foundation of Korea (NRF)}
+
+    \item \textbf{Treatment satisfaction comparison between tofacitinib citrate users and adalimumab users} (2019-31-1039) \hfill Feb 2021\\
+    \textit{PI: JM Nam $\cdot$ Funded by Pfizer Korea}
+\end{projlist}
+
 % Awards and Grants Section
-\section*{Grants \& Awards}
+\section*{Awards \& Honors}
 
-\subsection*{Research Grants}
-\noindent\textbf{Research Subsidies for Ph.D. Candidates} \hfill Sep 2024 -- Aug 2026\\
-\textit{Development and clinical application of variable selection methodology via network-based clustering of high-dimensional radiomics data}\\
-\textbf{Award Amount:} 50,000,000 KRW (2-year grant)
-
-\subsection*{Awards \& Honors}
 \begin{itemize}[leftmargin=1em]
     \setlength\itemsep{0.2em}
+    \item \textbf{Poster Award} (Excellence) -- Korean Society of Health Informatics and Statistics Fall Conference (2025)
     \item \textbf{Graduate Student Outstanding Paper Award} (Encouragement) -- Yonsei University College of Medicine (2022)
     \item \textbf{Poster Award} (3rd place/25 teams) -- Korean Statistical Society Summer Conference (2022)
     \item \textbf{Poster Award} (3rd place/42 teams) -- Korean Statistical Society Fall Conference (2021)
